@@ -1,0 +1,35 @@
+
+// @import 'animate.css';
+// @import '~loaders.css/src/animations/pacman.scss';
+
+// $primary-color: #ffd700;
+
+.textAnimate {
+  display: inline-block;
+  opacity: 0;
+  // animation: bounceIn;
+  // animation-duration: 1s;
+  // animation-delay: 1s;
+  // animation-fill-mode: forwards;
+  min-width: 10px;
+  margin: 0 5px;
+}
+
+.textAnimateHover {
+  min-width: 10px;
+  display: inline-block;
+  animation-fill-mode: both;
+  margin: 0 5px;
+
+  &:hover {
+    // animation: rubberBand 1s;
+    color: #ffd700;
+    transform: translate(0%, 5%);
+  }
+}
+
+// @for $i from 1 through 35 {
+//   .textAnimate._#{$i} {
+//     animation-delay: #{$i / 10}s;
+//   }
+// }
