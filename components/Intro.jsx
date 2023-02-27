@@ -1,9 +1,11 @@
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
+import { AiOutlineLinkedin, AiOutlineGithub , AiOutlineFilePdf } from 'react-icons/ai';
 import AnimatedLetters from './AnimateLetters'
 
 const Intro = ({heading, message, buttonMessage, buttonPath}) => {
   const [letterClass, setLetterClass] = useState('textAnimate')
+
   useEffect(() => {
     setTimeout(() => {
       setLetterClass('textAnimateHover')
@@ -16,7 +18,6 @@ const Intro = ({heading, message, buttonMessage, buttonPath}) => {
       <div className='p-5 text-white z-[2] mt-[-10rem]'>
         <h2 className='text-5xl font-mono px-5'>
           <AnimatedLetters 
-            // strArray={Array.from(heading)}
             strArray={heading.split(' ')}
             idx={heading.length}
             type={letterClass}
@@ -39,6 +40,17 @@ const Intro = ({heading, message, buttonMessage, buttonPath}) => {
             </button>
           </div>
         </Link>
+        <div className='absolute text-white z-[2] bottom-5 right-5'>
+          <Link href='https://www.linkedin.com/in/paksumlui/' className='hover:text-gray-500'>
+            <AiOutlineLinkedin size={30} style={{ color: 'white' }} />
+          </Link>
+          <Link href='https://github.com/samlui96' className='hover:text-gray-500'>
+            <AiOutlineGithub size={30} style={{ color: 'white' }} />
+          </Link>
+          <a href='Resume.pdf' download='Resume.pdf'> 
+            <AiOutlineFilePdf size={30} style={{ color: 'white' }} />
+          </a>
+        </div>
       </div>
     </div>
   );
