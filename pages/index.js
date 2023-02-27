@@ -17,7 +17,7 @@ const skills = [
     id: "2",
     image: "",
     title: "Technologies",
-    text: ['React', 'Redux', 'NextJS', 'VueJS', 'VueX', 'Vuetify', 'ExpressJS'],
+    text: ['React', 'Redux', 'NextJS', 'VueJS', 'VueX', 'Vuetify', 'ExpressJS', 'Docker', 'Tailwind CSS'],
   },
   {
     id: "3",
