@@ -1,19 +1,19 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
-const LoadingPage = ( { content}) => {
+const LoadingPage = ({ content }) => {
   const [loading, setLoading] = useState(false);
   useEffect(() => {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 500);
+    }, 1000);
   }, []);
 
   return (
     <div className="container">
       {loading ? (
         <div className="loader-container">
-           <div className="loader"></div>
+          <div className="loader"></div>
         </div>
       ) : (
         content

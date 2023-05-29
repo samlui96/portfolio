@@ -1,25 +1,25 @@
-
 // @import 'animate.css';
 // @import '~loaders.css/src/animations/pacman.scss';
 
 // $primary-color: #ffd700;
 
-.textAnimate {
-  display: inline-block;
-  opacity: 0;
-  // animation: bounceIn;
-  // animation-duration: 1s;
-  // animation-delay: 1s;
-  // animation-fill-mode: forwards;
-  min-width: 10px;
-  margin: 0 5px;
+@keyframes downToUp {
+  0% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(-80px);
+  }
 }
 
-.textAnimateHover {
+.text {
   min-width: 10px;
-  display: inline-block;
+  min-height: 10px;
+  display: inline-flex;
   animation-fill-mode: both;
   margin: 0 5px;
+  // animation: fadeIn 1s ease-in-out;
+  // animation-iteration-count: infinite;
 
   &:hover {
     // animation: rubberBand 1s;
@@ -28,8 +28,43 @@
   }
 }
 
-// @for $i from 1 through 35 {
+.wrapper {
+  // border: solid #eb1c49;
+  overflow: hidden;
+  // margin: auto;
+  width: 250px;
+  height: 20px;
+}
+
+.textbox {
+  width: 10px;
+  height: 10px;
+}
+
+.textAnimate {
+  // font-weight: bold;
+  color: #fbfbfb;
+  animation-name: downToUp;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+// .textAnimate {
+//   display: inline-block;
+//   opacity: 0;
+//   animation: bounceIn;
+//   animation-duration: 1s;
+//   animation-delay: 1s;
+//   animation-fill-mode: forwards;
+//   color: #00ff40;
+//   min-width: 10px;
+//   margin: 0 5px;
+// }
+
+// @for $i from 1 through 50 {
 //   .textAnimate._#{$i} {
-//     animation-delay: #{$i / 10}s;
+//     content: #{$i / 1};
+//     animation-duration: #{$i / 1}s;
 //   }
 // }

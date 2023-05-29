@@ -1,87 +1,87 @@
-import React from 'react'
-import Head from 'next/head';
-import Intro from '../components/Intro';
-import Slider from '@/components/Slider'
-import LoadingPage from '@/components/LoadingPage';
+import React from "react";
+import Head from "next/head";
+import Intro from "../components/Intro";
+import Slider from "@/components/Slider";
 
 const jobs = [
   {
-    year: 'Sep 2021 – Sep 2022',
-    title: 'Programmer',
+    year: "Sep 2021 – Sep 2022",
+    title: "Programmer",
     text: [
-      'Designed and developed front-end pages using VueJS, JavaScript, HTML5, and CSS',
-      'Synchronized middleware functions in back-end applications using ExpressJS',
-      'Created new stored procedures in MS SQL server to enhance the project performance',
-      'Established API connections with the marketplaces of Shopify and Wix',
-      'Created login page with Oauth 2.0 to authorize users',
-      'Developed projects in different testing states using Docker',
+      "Designed and developed front-end pages using VueJS, JavaScript, HTML5, and CSS",
+      "Synchronized middleware functions in back-end applications using Express",
+      "Created new stored procedures in MS SQL server to enhance the project performance",
+      "Established API connections with the marketplaces of Shopify and Wix",
+      "Created login page with Oauth 2.0 to authorize users",
+      "Implemented the version control, collaboration, and code management using tools such as Git and Bitbucket",
     ],
-    company: 'Yusen Logistics (Hong Kong) Limited',
-    address: 'Hong Kong, China'
+    company: "Yusen Logistics (Hong Kong) Limited",
+    address: "Hong Kong, China",
   },
   {
-    year: 'Feb 2020 – May 2020',
-    title: 'STEM Project Intern',
+    year: "Feb 2020 – May 2020",
+    title: "STEM Project Develoepr, Intern",
     text: [
-      'Designed system architecture and draw diagram',
-      'Create prototypes and models to demonstrate the applicability and value of new technologies',
-      'Developed Python Libraries for Firebase, ThingSpeak, and IFTTT',
-      'Built the corresponding RESTful API functions to interact three platforms',
-      'Established the user manuals for the use of Python Libraires',
-      'Implemented production migrations, monitoring, troubleshooting, tuning',
+      "Established the project proposal with system architecture, block diagrams, and operation principles",
+      "Developed the customed Python Libraries applications for Firebase, ThingSpeak, and IFTTT using PyCharm",
+      "Built the corresponding RESTful API functions with reusable codes",
+      "Handled the HTTP requests and response by using Python Requests Library",
+      "Implemented production migrations, monitoring, troubleshooting, tuning",
+      "Provided the technical documents for the use of Python Libraires",
     ],
-    company: 'Winstars Enterprise HK Limited',
-    address: 'Hong Kong, China'
+    company: "Winstars Enterprise HK Limited",
+    address: "Hong Kong, China",
   },
   {
-    year: 'Apr 2018 – Aug 2018',
-    title: 'Contract Junior Programmer',
+    year: "Apr 2018 – Aug 2018",
+    title: "Contract Junior Programmer",
     text: [
-      'Collaborated extensively with product management, design, and other engineers.',
-      'Developed the searching functions of web appilcation using Java',
-      'Created SQL statements to fulfill new features of the projects',
-      'Updated records of data tables in SQL server database',
-      'Reported to and carry out tasks assigned by the manager',
-      'Attended meetings to keep current with application issues',
+      "Developed and maintain Java applications using IntelliJ IDEA",
+      "Used Spring MVC to build and deploy web applications",
+      "Containerized applications using Docker",
+      "Used Bitbucket for version control, code management, and collaboration",
+      "Wrote and executed unit tests to ensure code quality using Junit",
+      "Collaborated with team members to resolve technical issues and bugs",
     ],
-    company: 'Taylor Coulter Limited',
-    address: 'Hong Kong, China'
+    company: "Taylor Coulter Limited",
+    address: "Hong Kong, China",
   },
   {
-    year: 'July 2016 – Aug 2016',
-    title: 'Assistant Officer',
+    year: "July 2016 – Aug 2016",
+    title: "Assistant Officer",
     text: [
-      'Provided clerical support such as data input and filing, quality checking',
-      'Worked on data cleansing, input and update data in internal system',
-      'Maintained accurate records and thorough documentation',
-      'Assisted in any ad-hoc assignments or special projects',
+      "Provided clerical support such as data input and filing, quality checking",
+      "Worked on data cleansing, input and update data in internal system",
+      "Maintained accurate records and thorough documentation",
+      "Assisted in any ad-hoc assignments or special projects",
     ],
-    company: 'Principal Trust Company (Asia) Limited',
-    address: 'Hong Kong, China'
-  }
-]
+    company: "Principal Trust Company (Asia) Limited",
+    address: "Hong Kong, China",
+  },
+];
 
 const experience = () => {
   return (
-    <LoadingPage content={
-      <div>
-        <Head>
-          <title>Experience Page</title>
-          <meta name='description' content='Generated by create next app' />
-          <link rel='icon' href='/favicon.ico' />
-        </Head>
-        <Intro 
-          heading='Summary' 
-          message='Highly motivated and self-driven programmer from Hong Kong. Holder of bachelor’s degree in Information Engineering. Solid understanding of frontend development. Seeking for java programming work opportunity in Canada and launch career in Canada.'
-          buttonPath='#details'
-          buttonMessage='More'
-        />
-        <div className="col d-flex flex-column flex-md-row justify-content-around align-items-center">
-        </div>
-        <Slider path='details' title='Details' itemsArray={jobs} />
-      </div>
-    }/>
-  )
-}
+    <div>
+      <Head>
+        <title>Experience Page</title>
+        <meta name="description" content="Generated by create next app" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <Intro
+        heading="Summary"
+        message="Highly motivated and self-driven developer with bachelor’s degree in Information
+        Engineering. Solid understanding with JavaScript, HTML, and CSS. Familiar with
+        developing java-based backend system and having experience to develop Spring
+        Boot microservice system and Spring MVC application. Passion, self-motivated,
+        and committed to becoming a professional full stack developer."
+        buttonPath="#details"
+        buttonMessage="More"
+      />
+      <div className="col d-flex flex-column flex-md-row justify-content-around align-items-center"></div>
+      <Slider path="details" title="Details" itemsArray={jobs} />
+    </div>
+  );
+};
 
-export default experience
+export default experience;

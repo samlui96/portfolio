@@ -1,21 +1,40 @@
-import customStyle from '../styles/AnimateLetters.module.scss'
-import { clsx } from 'clsx';
+import customStyle from "../styles/AnimateLetters.module.scss";
+import { clsx } from "clsx";
 
-const AnimatedLetters = ({strArray, idx, type}) => {
+const AnimatedLetters = ({ scroll, strArray, idx, type }) => {
   return (
-    <span>
-      {strArray.map((char, i) => (
-        // <span key={char + i} className='inline-block opacity-0 animate__animated animate__bounce'>
-        <span key={char + i} className={`_${i + idx}`}>
-            <span className={clsx({
-              [customStyle.textAnimate]: type === 'textAnimate',
-              [customStyle.textAnimateHover]: type === 'textAnimateHover',
-            })}>
-              {char}
+    <div>
+      {scroll ? (
+        <div className={customStyle.wrapper}>
+          {strArray.split("/").map((char, i) => (
+            <span key={char + i} className={`_${i}`}>
+              <span
+                className={clsx({
+                  [customStyle.text]: true,
+                  [customStyle.textAnimate]: true,
+                })}
+              >
+                {char}
+              </span>
             </span>
-        </span>
-      ))}
-    </span>
-  )
-}
-export default AnimatedLetters
+          ))}
+        </div>
+      ) : (
+        <div>
+          {strArray.split(" ").map((char, i) => (
+            <span key={char + i} className={`_${i}`}>
+              <span
+                className={clsx({
+                  [customStyle.text]: true,
+                })}
+              >
+                {char}
+              </span>
+            </span>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+};
+export default AnimatedLetters;
