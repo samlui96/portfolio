@@ -5,7 +5,7 @@ const AnimatedLetters = ({ scroll, strArray, idx, type }) => {
   return (
     <div>
       {scroll ? (
-        <div className={customStyle.wrapper}>
+        <div className="overflow-hidden w-full grid grid-cols-1 h-5">
           {strArray.split("/").map((char, i) => (
             <span key={char + i} className={`_${i}`}>
               <span

@@ -35,16 +35,17 @@ const Intro = ({ scroll, heading, message, buttonMessage, buttonPath }) => {
             type={letterClass}
           />
         </div>
-        {/* <Link href={buttonPath ? buttonPath : "#"}>
-          <div className="px-5">
+        <div className="flex px-5">
+          <Link href={buttonPath ? buttonPath : "#"}>
             <button
               className="px-8 py-2 border font-mono hover:bg-gray-600"
               style={{ display: buttonPath ? "block" : "none" }}
             >
               {buttonMessage ? buttonMessage : ""}
             </button>
-          </div>
-        </Link> */}
+          </Link>
+        </div>
+
         <div className="absolute text-white z-[2] bottom-5 right-5">
           <Link
             href="https://www.linkedin.com/in/paksumlui/"
